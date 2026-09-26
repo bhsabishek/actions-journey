@@ -2,8 +2,8 @@ name: hello
 on:
   push:
 jobs:
-  hello:
+  greet:
     runs-on: ubuntu-latest
     steps:
       - name: greeting
-        run: echo "Hello Abishek"
+        run: echo "Hello from Github Actions :)"
