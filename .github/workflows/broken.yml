@@ -8,5 +8,7 @@ jobs:
         uses: actions/checkout@v5
       - name: Read the readme 
         run: cat README.md
+      - name: Install Python
+        run: apt install python -y
       - name: Show the Python version
         run: pyhton3 --version
