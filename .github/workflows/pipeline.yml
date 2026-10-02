@@ -19,4 +19,4 @@ jobs:
     needs: [build, test]
     runs-on: ubuntu-latest
     steps:
-      - run: "Deploying ${{ needs.build.outputs.version}}"
+      - run: "Deploying ${{ needs.build.outputs.version }}"
