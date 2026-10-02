@@ -1,0 +1,19 @@
+name: release
+on: push
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: linting
+        run: echo "linting...."
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: unit-tests
+        run: echo "running unit-testss..."
+  package:
+    needs: [lint, unit-tests]
+    runs-on: ubuntu-latest
+    steps:
+      - name: needs step
+        run: echo "hoping this will get succeeded"
