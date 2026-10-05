@@ -1,0 +1,22 @@
+name: pipeline
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{steps.ver.outputs.version}}
+    steps:
+      - name: compute version
+        id: ver
+        run: echo "version=1.4.2" >> "$GITHUB_OUTPUT"
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echoing...
+        run: echo "Testing...."
+  deploy:
+    needs: [build, test]
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deploying ${{ needs.build.outputs.version }}"

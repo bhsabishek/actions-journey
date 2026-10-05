@@ -1,0 +1,8 @@
+name: region
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: reading repo variable value
+        run: echo ${{vars.DEPLOY_REGION}}
