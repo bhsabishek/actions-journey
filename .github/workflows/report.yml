@@ -1,0 +1,14 @@
+name: report
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: current date
+        run: date > report.txt
+      - name: upload artifact
+        uses: action/upload-artifact@v4
+        with:
+          name: build-report
+          path: report.txt
+          retnetion-days: 5
