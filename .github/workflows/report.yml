@@ -11,4 +11,4 @@ jobs:
         with:
           name: build-report
           path: report.txt
-          retnetion-days: 5
+          retention-days: 5
