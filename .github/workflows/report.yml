@@ -7,7 +7,7 @@ jobs:
       - name: current date
         run: date > report.txt
       - name: upload artifact
-        uses: action/upload-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
           name: build-report
           path: report.txt
