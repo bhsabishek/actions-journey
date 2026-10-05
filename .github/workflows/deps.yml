@@ -1,0 +1,13 @@
+name: deps
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: caching
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ hashfiles('requirements.txt') }}
+          restore-keys: |
+            pip-
