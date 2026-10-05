@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: run tests
-        run: eco "running tests"
+        run: echo "running tests"
       - name: Deploy
         if: github.ref == 'refs/heads/main'
         run: echo "Deploying...."
