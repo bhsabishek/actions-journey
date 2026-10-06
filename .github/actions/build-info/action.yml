@@ -1,0 +1,9 @@
+name: build-info
+description: prints branch name and the commit information
+runs:
+  using: composite
+  steps:
+    - run: echo "Branch $GITHUB_REF_NAME"
+      shell: bash
+    - name: echo "Commit #GITHUB_SHA"
+      shell: bash
