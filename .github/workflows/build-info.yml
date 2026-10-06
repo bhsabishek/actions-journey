@@ -1,9 +1,10 @@
 name: build-info
 on:
-  push
+  push:
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - name: code checkout
-      uses: actions/checkout@v4
-    - uses: ./.github/actions/build-info
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: code checkout
+        uses: actions/checkout@v4
+      - uses: ./.github/actions/build-info
