@@ -1,0 +1,11 @@
+name: announce-action
+description: inputs action
+inputs:
+  app-name:
+    description: Should pass input for the app-name
+    required: true
+runs:
+  using: composite
+  steps:
+    - run: echo "Building ${{ inputs.app-name }}"
+      shell: bash
