@@ -1,0 +1,11 @@
+name: tidy
+on: push
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  runs-on: ubuntu-latest
+  timeout-minutes: 10
+  steps:
+    - run: actions/checkout@v4
+    - run: ls .
